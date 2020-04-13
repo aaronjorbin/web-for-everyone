@@ -1,12 +1,9 @@
-import { Appear, Head, Notes, Image } from 'mdx-deck'
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer';
+import customTheme from './theme.js';
+import { Head, Image, Appear, Notes } from 'mdx-deck';
+import 'prismjs/components/prism-php';
 
-import aspect from '@mdx-deck/themes/aspect';
-import future from '@mdx-deck/themes/future';
-import highlight from '@mdx-deck/themes/syntax-highlighter';
-import syntaxHighlighterPrism from '@mdx-deck/themes/syntax-highlighter-prism';
-import theme from './theme';
-
-export const themes = [ aspect, future, syntaxHighlighterPrism, theme ]
+export const theme = customTheme;
 
 
 <Head>
@@ -25,7 +22,7 @@ export const themes = [ aspect, future, syntaxHighlighterPrism, theme ]
 
 ---
 
-# Resonsive, but for People
+# Responsive, but for People
 
 ---
 
@@ -74,10 +71,67 @@ Text means machine readable, not machine guesable
 
 --- 
 
-# Time Based Media
+<CodeSurfer>
+
+```html subtitle="bad" 
+<img src="sunset-123.png">
+```
+
+```html subtitle="better" 
+<img src="sunset-123.png" alt="Image of Sunset">
+```
+
+```html subtitle="good" 
+<img src="sunset-123.png" alt="Sunset over Hoboken">
+```
+
+</CodeSurfer>
 
 ---
 
+# Succinct, yet descriptive
+
+---
+
+# Blank Alt 
+
+---
+
+# Time Based Media
+
+<Notes>
+	Provide Alternatives, Captions and Audio Descriptions
+</Notes>
+
+---
+
+# Adaptable
+
+<Notes>
+	 Do not rely solely on sensory characteristic and Identify Input Purposes
+</Notes>
+
+--- 
+
+<CodeSurfer>
+
+```html subtitle="bad"
+<input type="text" name="search" id="search">
+<button id="searchbutton" type="submit">Search</button>
+```
+
+```html subtitle="good"
+<input type="text" name="search" aria-labelledby="searchbutton">
+<button id="searchbutton" type="submit">Search</button>
+```
+
+</CodeSurfer>
+
+---
+
+# Accessible Rich Internet Applications
+
+---
 # Distinguisable
 
 ## Color, Contrast, Resizable, One Dimmension
@@ -102,6 +156,10 @@ Text means machine readable, not machine guesable
 
 ---
 
+# Tab Test
+
+---
+
 # Enough Time
 
 ---
@@ -112,13 +170,31 @@ Text means machine readable, not machine guesable
 
 # Navigable
 
+## Can I use this site?  
+
+---
+
+# Skip Links
+
+---
+
+# Link Purpose
+
+---
+
+# Visible Focus
+
 ---
 
 # Input Modularites 
 
 ---
 
-# Undertandable
+# Target Areas
+
+---
+
+# Understandable
 
 <ul>
   <Appear>
@@ -133,6 +209,10 @@ Text means machine readable, not machine guesable
 # Readable
 
 ## Most of this is AAA
+
+---
+
+# Language can be progomatically determined  
 
 ---
 
